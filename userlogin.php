@@ -13,8 +13,7 @@ require "config.php";
 if(isset($_POST['user'])){
     $username = $_POST['username'];
     $password = $_POST['password'];
-    
-    $sql = "select * from aics.users where username = :user and password = :pass ";
+    $sql = "select * from aics.admin where username = :user and password = :pass ";
     $query = $conn->prepare($sql);
     $query -> bindparam(':user', $username);
     $query -> bindparam(':pass', $password);
@@ -40,8 +39,6 @@ if(isset($_POST['user'])){
     
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +50,7 @@ if(isset($_POST['user'])){
    
 </head>
 <body>
-    <form action="login.php" method="POST">
+    <form action="userlogin.php" method="POST">
         <label for="">Username</label><br>
         <input type="text" name="username"><br>
         <label for="">Password</label><br>

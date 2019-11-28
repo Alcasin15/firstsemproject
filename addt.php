@@ -72,7 +72,7 @@ input[type=date] {
   box-sizing: border-box;
 }
 input[type=submit] {
-  width: 50%;
+  width: 100%;
   background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
@@ -83,10 +83,10 @@ input[type=submit] {
 }
 
 
-
 input[type=submit]:hover {
   background-color: #45a049;
 }
+
 
 
 </style>
@@ -94,25 +94,18 @@ input[type=submit]:hover {
 
 </script>
 <div class="container">
-<form action="addnew.php" method="POST">
+<form action="addteacher.php" method="POST">
         <label for="">First Name</label><br>
-        <input type="text" name="firstname" required placeholder="First Name" size="35"><br>
-        <label for="">Last Name: </label><br>
-        <input type="text" name="lastname" required placeholder="Last Name" ><br>
-        <label for="">Middle Name: </label><br>
-        <input type="text" name="middlename" required placeholder="Middle Name"><br>
-        <label for="">Age: </label><br>
-        <input type="text" name="age" required placeholder="Age"><br>
+        <input type="text" name="fname" required placeholder="First Name" size="35"><br>
+        <label for="">Middle Name </label><br>
+        <input type="text" name="mname" required placeholder="Middle Name" ><br>
+        <label for="">Last Name </label><br>
+        <input type="text" name="lname" required placeholder="Last Name"><br>
         <label for="">Gender</label><br>
-        <input type="text" name="gender" required placeholder="Gender"><br>
-        <label for="">Birthdate</label><br>
-        <input type="date" name="birthdate" required ><br>
-        <label for="">Contact No.</label><br>
-        <input type="text" name="Contact" required placeholder="Contact No."><br>
-        <label for="">Place he/she currently live:</label><br>
-        <input type="text" name="place" required placeholder="Place he/she curre...."><br><br>
-        <input type = "submit" class="btn btn-success" name = "add" value = "ADD">
-
+        <input type="text" name="gend" required placeholder="Gender"><br>
+        <label for="">Status</label><br>
+        <input type="text" name="stat" required placeholder="Status"><br><br>
+        <input type = "submit" class="btn btn-success" name = "addt" value = "ADD">
 
 </div>
 

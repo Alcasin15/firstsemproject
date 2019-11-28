@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `philhealth`
+-- Database: `aics`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblemployee`
+-- Table structure for table `registrants`
 --
 
 CREATE TABLE `registrants` (
@@ -41,7 +41,7 @@ CREATE TABLE `registrants` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tblemployee`
+-- Dumping data for table `registrants`
 --
 
 -- table next is teachers add teachers
@@ -50,10 +50,42 @@ INSERT INTO `registrants` (`id`, `FirstName`, `LastName`, `MiddleName`, `Age`, `
 (2, 'Dean', 'Wynchester', 'William', '20', 'Male', '1979-01-24', '0987654321', 'Kansas');
 
 
+
+
+CREATE TABLE `teachers` (
+  `id` int(11) NOT NULL,
+  `FirstName` varchar(100) NOT NULL,
+  `MiddleName` varchar(100) NOT NULL,
+  `LastName` varchar(100) NOT NULL,
+  `Gender` varchar(100) NOT NULL,
+  `Status` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `teachers` (`id`, `FirstName`, `MiddleName`, `LastName`, `Gender`, `Status`) VALUES
+(1, 'Clavel', 'Redondo', 'Laride' , 'Female', 'Single'),
+(2, 'Gabriel', 'Lala', 'Lopez' , 'Male', 'Married'),
+(3, 'Marvin', 'Apetite', 'Cabasag', 'Male', 'Single');
+
+
+
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `nickname` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `users` (`id`, `username`, `password`, `nickname`) VALUES
+(1, 'Sheena', '12345', 'Shi-Shi'),
+(2, 'Marian', '12345', 'Baby'),
+(3, 'Juvi', '12345', 'Juvss');
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tblusers`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -76,13 +108,21 @@ INSERT INTO `admin` (`id`, `username`, `password`, `nickname`) VALUES
 --
 
 --
--- Indexes for table `tblemployee`
+-- Indexes for table `registrants`
 --
 ALTER TABLE `registrants`
   ADD PRIMARY KEY (`id`);
 
+
+ALTER TABLE `teachers`
+  ADD PRIMARY KEY (`id`);
+
+
+  ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 --
--- Indexes for table `tblusers`
+--
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
@@ -92,13 +132,20 @@ ALTER TABLE `admin`
 --
 
 --
--- AUTO_INCREMENT for table `tblemployee`
+-- AUTO_INCREMENT for table `registrants`
 --
 ALTER TABLE `registrants`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
+
+ALTER TABLE `teachers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+
+  ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
--- AUTO_INCREMENT for table `tblusers`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

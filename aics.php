@@ -193,7 +193,8 @@ STRANDS -->
             </form>
       
             <div class="w3-container w3-border-top w3-padding-16 ">
-              <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+             <span class="w3-left w3-padding w3-hide-small"> <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button></span>
+              <span class="w3-right w3-padding w3-hide-small"><button class="w3-button w3-green w3-section w3-padding" type="submit"><a href="user.php">Not an admin?</a></button></span>
               
             </div>
       

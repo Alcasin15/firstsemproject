@@ -2,7 +2,49 @@
 <head>
 	<title>registration</title>
 </head>
+<style>
 
+body{
+     background-image: url("registration.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ 
+}
+.text{
+    font-size:30px;
+    font-family:'Dancing Script', cursive;
+    text-align:center;
+    margin-top:150px;
+    color:#a832a2;
+    
+}
+p{
+    font-size:25px;
+    font-family:'Dancing Script', cursive;
+    text-align:center;
+    
+    color:#a832a2;
+
+}
+button{
+  margin-left:50%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
+<body>
+
+<div class="text">
+<h1>Thank you for registering!!!</h1>
+</div>
+<p>We will just call you for more info</p>
+<button class=" btn btn-success" value="LOGIN"><a href="aics.php">Go back</a></button>
 <body>
 <?php
 //including the database connection file
@@ -70,9 +112,7 @@ if(isset($_POST['add'])) {
         $query -> bindparam(':place', $place);
         $query -> execute();
 		
-        echo "<font color='green'; family='chiller'; text-align='center';>Thank you!!!";
         
-		echo "<br/><a href='aics.php'>Go back </a>";
 	}
 }
 ?>

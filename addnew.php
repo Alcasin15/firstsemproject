@@ -2,8 +2,49 @@
 <head>
 	<title>Add Data</title>
 </head>
+<style>
 
+body{
+     background-image: url("registration.jpg");
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+ 
+}
+.text{
+    font-size:30px;
+    font-family:'Dancing Script', cursive;
+    text-align:center;
+    margin-top:150px;
+    color:#a832a2;
+    
+}
+p{
+    font-size:25px;
+    font-family:'Dancing Script', cursive;
+    text-align:center;
+    
+    color:#a832a2;
+
+}
+button{
+  margin-left:50%;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+</style>
 <body>
+<div class="text">
+<h1>Student added Successfully!!!</h1>
+</div>
+
+<button class=" btn btn-success" value="LOGIN"><a href="index.php">Go back</a></button>
+</body>
 <?php
 //including the database connection file
 include_once("config.php");
@@ -70,7 +111,7 @@ if(isset($_POST['add'])) {
         $query -> bindparam(':place', $place);
         $query -> execute();
 		
-		echo "<font color='green'>Data added successfully.";
+		
 		echo "<br/><a href='index.php'>View Result</a>";
 	}
 }
